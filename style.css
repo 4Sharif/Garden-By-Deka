@@ -20,6 +20,10 @@ body {
     background-image: linear-gradient(rgba(255,255,255,0.8),rgba(255,255,255,0.8)), url(images/backgroundH.png);
 }
 
+.body-tour {
+    background-image: linear-gradient(rgba(255,255,255,0.8),rgba(255,255,255,0.8)), url(images/backgroundT.png);
+}
+
 .hero {
     position: relative;
     width: 100%;
@@ -138,6 +142,22 @@ body {
 .wide-box p {
     text-align: justify;
     padding-top: 40px;
+}
+
+.wide-box-links {
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-evenly; 
+}
+
+.wide-box-links a {
+    text-decoration: none;
+    color: black;
+}
+
+.wide-box-links a:hover {
+    text-decoration: underline;
+    color: hsla(0, 0%, 10%, 0.5);
 }
 
 .large-box {
