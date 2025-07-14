@@ -12,9 +12,12 @@
     --olive35: rgba(62,69,38,.35);
 }
 
-body {
-    margin: 0;
+body { 
     font-family:'Outfit', sans-serif;
+}
+
+.body-home {
+    background-image: linear-gradient(rgba(255,255,255,0.8),rgba(255,255,255,0.8)), url(images/backgroundH.png);
 }
 
 .hero {
@@ -49,7 +52,7 @@ body {
     text-align: center;
     font-size: 2rem;
     color: white;
-    padding-inline:min(6vw,3rem); 
+    padding-inline: min(6vw,3rem); 
 }
 
 .hero-nav {
@@ -69,8 +72,134 @@ body {
 }
 
 .hero-nav a:hover {
-    color: #1e1e1e;
+    color: #1e1e1e; 
     background: rgba(230,230,230,.4);    
     border: 1px solid #1e1e1e; 
     border-radius: 4px;
+    transition: background .25s;
+}
+
+.medium-box-flex {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.medium-box { 
+    width: 45vw;
+    height: 316px;
+    margin: 50px;
+    padding: 50px 20px;
+    background-color: hsla(0, 0%, 90%, 0.8);
+    box-shadow: 0px 0px 60px hsla(0, 0%, 12%, 0.35); 
+    border-radius: 15px;
+}
+
+.medium-box h3 {
+    text-align: center;
+    font-size: 1.4em;
+}
+
+.medium-box p {
+    text-align: justify;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.cta {
+    text-decoration: none;
+    background-color: white;
+    border: 1px solid black; 
+    border-radius: 7px; 
+    padding: 5px 50px; 
+    display: flex;
+    justify-self: center;
+    color: black;
+}
+
+.cta:hover {
+    background-color: hsla(0, 0%, 90%, 0.80);
+}
+
+.wide-box {
+    width: 92vw;
+    height: 316px;
+    margin: 50px;
+    padding: 50px 20px;
+    background-color: hsla(0, 0%, 90%, 0.8);
+    box-shadow: 0px 0px 60px hsla(0, 0%, 12%, 0.35); 
+    border-radius: 15px;
+}
+
+.wide-box h3 {
+    text-align: center;
+    font-size: 1.4em;
+}
+
+.wide-box p {
+    text-align: justify;
+    padding-top: 40px;
+}
+
+.large-box {
+    margin: 50px;
+    border: 2px solid black;
+    padding: 40px;
+    width: 92vw;
+    height: 1579px;
+    border-radius: 15px;
+    background-color: hsla(0, 0%, 100%, 0.8);
+}
+
+.large-box h3 {
+    text-align: center;
+    font-size: 1.4em;
+}
+
+.large-box hr {
+    border-top: 2px dashed black;
+    margin-top: 30px;
+    width: 85%;
+    display: flex;
+    justify-self: center;
+}
+
+.small-box-flex {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.small-box {
+    margin: 50px;
+    background-color: hsla(0, 0%, 90%, 0.8);
+    width: 25%;
+    border-radius: 15px;
+    opacity: 90%;
+}
+
+.small-box h6 {
+    padding-top: 10px;
+    text-align: center;
+    font-size: 1em;
+} 
+
+.small-box img {
+    padding: 20px; 
+    display: block;
+    margin: auto;  
+    border-radius: 15px; 
+}
+
+footer { 
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: black;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: hsla(0, 0%, 10%, 0.5);
 }
