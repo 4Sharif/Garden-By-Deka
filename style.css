@@ -284,11 +284,7 @@ body {
 
 .large-box ul::-webkit-scrollbar {
     display: none;
-}
-
-.large-box li {
-    scroll-snap-align: center;
-}
+} 
 
 footer { 
     text-align: center;
