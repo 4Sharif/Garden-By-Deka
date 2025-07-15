@@ -182,7 +182,7 @@ body {
     width: 92vw;
     height: 1579px;
     border-radius: 15px;
-    background-color: hsla(0, 0%, 100%, 0.8);
+    background-color: hsla(0, 0%, 100%, 0.8);  
 }
 
 .large-box h3 {
@@ -254,6 +254,40 @@ body {
 .tour-box p {
     padding-top: 10%;
     text-align: justify;
+}
+
+.dropdown-date {
+    margin: 20px;
+}
+
+.large-box ul {
+    margin: 20px auto;
+    width: 80%; 
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1vw; 
+    overflow-x: hidden;
+}
+
+.large-box li {
+    list-style-type: none; 
+    border: 2px solid hsl(0, 0%, 90%);
+    padding: 20px; 
+    flex: 0 0 100%; 
+} 
+
+.large-box ul {
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+}
+
+.large-box ul::-webkit-scrollbar {
+    display: none;
+}
+
+.large-box li {
+    scroll-snap-align: center;
 }
 
 footer { 
