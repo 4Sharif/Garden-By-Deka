@@ -115,6 +115,15 @@ body {
     padding-bottom: 40px;
 }
 
+.medium-box a {
+    color: black;
+}
+
+.medium-box a:hover {
+    text-decoration: underline;
+    color: hsla(0, 0%, 10%, 0.5);
+}
+
 .cta {
     text-decoration: none;
     background-color: white;
@@ -214,6 +223,37 @@ body {
     display: block;
     margin: auto;  
     border-radius: 15px; 
+}
+
+.tour-box {
+    margin: 50px auto;
+    padding: 50px 100px;
+    width: 80%;
+    height: 60%;
+    background-color: hsla(0, 0%, 90%, 0.8);
+    border-radius: 15px; 
+    box-shadow: 0px 0px 60px hsla(0, 0%, 12%, 0.35); 
+}
+
+.large-box-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.large-box-flex img {
+    border-radius: 15px;  
+    box-shadow: 0px 0px 60px hsla(0, 0%, 12%, 0.35); 
+}
+
+.large-box-flex h3 {
+    font-size: 3rem; 
+    text-align: right;
+    font-weight: lighter;  
+}
+
+.tour-box p {
+    padding-top: 10%;
+    text-align: justify;
 }
 
 footer { 
