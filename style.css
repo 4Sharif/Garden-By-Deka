@@ -266,13 +266,12 @@ body {
     padding: 20px;
     display: flex;
     justify-content: space-evenly;
-    gap: 1vw; 
+    gap: 0.25%; 
     overflow-x: hidden;
 }
 
 .large-box li {
-    list-style-type: none; 
-    border: 2px solid hsl(0, 0%, 90%);
+    list-style-type: none;  
     padding: 20px; 
     flex: 0 0 100%; 
 } 
@@ -285,6 +284,11 @@ body {
 .large-box ul::-webkit-scrollbar {
     display: none;
 } 
+
+.large-box ul img {
+    border: 1px solid black;
+    border-radius: 3%;
+}
 
 footer { 
     text-align: center;
