@@ -206,5 +206,20 @@
              <br> <br>
         </p>
     </footer>
+    <script>
+        const monthSelect = document.getElementById('month');
+        const yearSelect = document.getElementById('year'); 
+        function scrollToSection() {
+            const month = monthSelect.value.toLowerCase();
+            const year = yearSelect.value; 
+            const targetId = `${month}`;
+            const section = document.getElementById(targetId);
+            if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+            }
+        } 
+        monthSelect.addEventListener('change', scrollToSection);
+        yearSelect.addEventListener('change', scrollToSection);
+    </script>
 </body>
 </html>
