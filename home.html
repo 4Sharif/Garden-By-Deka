@@ -124,7 +124,7 @@
             (estNow - new Date(estNow.getFullYear(), 0, 0)) / 1000 / 60 / 60 / 24
             ); 
             const factIndex = dayOfYear % facts.length;
-            const factParagraph = document.querySelector('.wide-box p');
+            const factParagraph = document.querySelector('.wide-box .facts');
             factParagraph.textContent = facts[factIndex];
         })
         .catch(error => console.error('Error loading plant facts:', error));

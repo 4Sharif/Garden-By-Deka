@@ -133,6 +133,7 @@ body {
     display: flex;
     justify-self: center;
     color: black;
+    width: fit-content;
 }
 
 .cta:hover {
@@ -196,6 +197,8 @@ body {
     width: 85%;
     display: flex;
     justify-self: center;
+    margin-left: auto;  
+    margin-right: auto;
 }
 
 .small-box-flex {
@@ -243,6 +246,7 @@ body {
 .large-box-flex img {
     border-radius: 15px;  
     box-shadow: 0px 0px 60px hsla(0, 0%, 12%, 0.35); 
+    filter: brightness(1) !important;
 }
 
 .large-box-flex h3 {
@@ -279,6 +283,7 @@ body {
 .large-box ul {
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
+    scrollbar-width: none;
 }
 
 .large-box ul::-webkit-scrollbar {
