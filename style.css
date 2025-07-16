@@ -12,9 +12,17 @@
     --olive35: rgba(62,69,38,.35);
 }
 
-body { 
-    font-family:'Outfit', sans-serif;
+html {
+    scrollbar-width: none;
 }
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+body { 
+    font-family:'Outfit', sans-serif; 
+} 
 
 .body-home {
     background-image: linear-gradient(rgba(255,255,255,0.8),rgba(255,255,255,0.8)), url(images/backgroundH.png);
@@ -87,6 +95,49 @@ body {
     background: rgba(230,230,230,.55);     
     border-radius: 4px;
     transition: background .50s;
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+    margin-left: auto; 
+    width: 40px;
+    height: 40px;
+    background-color: hsla(0, 0%, 100%, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.296);
+    border-radius: 5%;
+    z-index: 10;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: hsla(0, 0%, 100%, 0.95);
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-top: -1px;
+    width: 120px;
+    right: 0;
+    text-align: left;
+    right: 0;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 8px 12px;
+    text-decoration: none;
+    color: black;
+}
+
+.dropdown-menu a:hover {
+    background-color: var(--gray80);
+}
+
+.sticky:hover .dropdown-menu {
+    display: block;
 }
 
 .medium-box-flex {
@@ -163,8 +214,8 @@ body {
 .wide-box-links {
     padding-top: 20px;
     display: flex;
-    justify-content: space-evenly; 
-}
+    justify-content: space-evenly;  
+} 
 
 .wide-box-links a {
     text-decoration: none;
