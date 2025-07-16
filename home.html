@@ -38,9 +38,8 @@
             </div>
         </div>
         <div class="wide-box">
-            <h3>Plant Fact of The Day</h3>
-            <!--This is were the JS script (For the fact DB) should go instead of this lorem text-->
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam sed tenetur maxime expedita asperiores a labore vel quas vitae fuga dolore odit, eaque voluptatum amet dignissimos, pariatur nobis deleniti quidem? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi vero nesciunt pariatur amet rem. Eaque rerum distinctio minus ad nostrum adipisci voluptatem ipsam illum officia ipsum ut, consequuntur aliquid cum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati distinctio esse consectetur animi laborum? Voluptate sed deserunt maxime sit, sint tempora! Facere alias sit aliquam, distinctio minus quia assumenda reprehenderit.</p>
+            <h3>Plant Fact of The Day</h3> 
+            <p class="facts"></p>
         </div>
         <div class="large-box">
             <h3>Pictures of The Week</h3>
@@ -113,5 +112,22 @@
              <br> <br>
         </p>
     </footer>
+    <script> 
+        fetch('facts.json')
+        .then(response => response.json())
+        .then(facts => {
+            const now = new Date(); 
+            const utcHour = now.getUTCHours();
+            const estOffset = -5;
+            const estNow = new Date(now.getTime() + (estOffset - utcHour) * 60 * 60 * 1000); 
+            const dayOfYear = Math.floor(
+            (estNow - new Date(estNow.getFullYear(), 0, 0)) / 1000 / 60 / 60 / 24
+            ); 
+            const factIndex = dayOfYear % facts.length;
+            const factParagraph = document.querySelector('.wide-box p');
+            factParagraph.textContent = facts[factIndex];
+        })
+        .catch(error => console.error('Error loading plant facts:', error));
+    </script> 
 </body>
 </html> 
