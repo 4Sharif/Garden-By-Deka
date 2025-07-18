@@ -330,6 +330,7 @@ body {
 .large-box-flex {
     display: flex;
     justify-content: space-between;
+    padding: 0 25px;
 }
 
 .large-box-flex img {
@@ -338,9 +339,10 @@ body {
 }
 
 .large-box-flex h3 {
-    font-size: 3rem; 
+    font-size: 4rem; 
     text-align: right;
     font-weight: lighter;  
+    margin: auto 0;
 }
 
 .tour-box p {
