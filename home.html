@@ -37,23 +37,23 @@
     </div>
     <main>
         <div class="medium-box-flex"> 
-            <div class="medium-box medium-box-side">
+            <div class="medium-box medium-box-side fade-hidden">
                 <h3>Welcome To Our Garden!</h3>
                 <div class="medium-box-side-content"> 
                     <p>Welcome to Garden By Deka, a place where we record the day‑to‑day progress of Deka’s garden and share ideas for fellow plant lovers. Each section of the site highlights what’s growing, what’s blooming, and the simple techniques we use to keep the beds thriving through every season. Browse the pages and gather ideas for your own space. To learn more, view our About page.</p>
                     <a href="about.html" class="cta">About</a>
                 </div>
             </div>
-            <div class="medium-box">
+            <div class="medium-box fade-hidden">
                 <h3>Discover Our Page and Contact Us</h3>
                 <p>Our site breaks down Deka's garden in its entirety. Check out the <a href="tour.html">Tour</a> page, where you'll see flower pots, how she maintains her garden beds, all the decorations set up, and more. In the <a href="gallery.html">Gallery</a> section, you'll be able to view the best photos taken each month. If you want to follow Deka on her journey, go to her dedicated <a href="#">TikTok</a> page where she posts consistently. If you have any more questions about this site, send us an <a href="#">email</a>.</p> 
             </div>
         </div>
-        <div class="wide-box">
+        <div class="wide-box fade-hidden">
             <h3>Plant Fact of The Day</h3> 
             <p class="facts"></p>
         </div>
-        <div class="large-box">
+        <div class="large-box fade-hidden">
             <h3>Pictures of The Week</h3>
             <hr class="hr-home">
             <div class="small-box-flex">
@@ -132,6 +132,24 @@
             factParagraph.textContent = facts[factIndex];
         })
         .catch(error => console.error('Error loading plant facts:', error));
+    </script> 
+    <script> 
+        (function () {
+        const faders = document.querySelectorAll('.fade-hidden');
+        const options = {
+            threshold: 0.05            
+        }; 
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('fade-visible');
+            } else {                 
+                entry.target.classList.remove('fade-visible');
+            }
+            });
+        }, options); 
+        faders.forEach(el => io.observe(el));
+        })();
     </script> 
 </body>
 </html> 

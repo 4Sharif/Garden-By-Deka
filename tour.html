@@ -36,7 +36,7 @@
         </div>
     </div>
     <main>
-        <div class="wide-box">
+        <div class="wide-box fade-hidden">
             <h3>Explore Our Garden</h3>
             <p>There are many things to explore, and visitors can move through at their own pace. Our garden beds hold a variety of vegetables, like tomatoes and peppers. They're grown in compost and watered consistently. Along the walkway, a series of large containers display herbs and flowers chosen for pollinator support and ease of maintenance. Decorative features such as colorful signs, poles, and low‑voltage lighting characterize each area for a boost of personality. Some notes are presented for labeling names and dates, along with basic requirements for anyone who would like to replicate the results. The goal of the tour is to show how to keep the space productive within seasons while maintaining a clean, approachable layout.</p>
             <div class="wide-box-links"> 
@@ -46,7 +46,7 @@
                 <a href="#wild-life">Wild Life</a>
             </div>
         </div>
-        <div class="large-box" id="beds">
+        <div class="large-box fade-hidden" id="beds">
             <h3>Garden Beds</h3>
             <hr>
             <div class="tour-box">
@@ -64,7 +64,7 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus nulla velit autem atque fuga numquam nam labore, nostrum, molestiae aut laudantium fugiat dolorum necessitatibus a saepe minima laborum. Laborum, asperiores! Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda saepe beatae ullam nostrum ducimus, tenetur consequuntur ea consectetur quod temporibus dicta quidem aliquid debitis expedita perferendis, amet fugit, rerum impedit.Eum exercitationem, voluptates ullam, neque necessitatibus earum quo, nesciunt non excepturi esse quisquam! Incidunt architecto, dolorum ad molestiae voluptatibus harum accusamus in quis veniam sed? Suscipit culpa veritatis laudantium error. Accusamus, atque tempora aut magni aliquid facilis provident quia ut deleniti fugit quibusdam vitae veritatis rerum explicabo, consectetur nisi eos, numquam deserunt eveniet impedit. Maiores repellat aperiam facilis nobis ipsa.</p>
             </div>  
         </div>
-        <div class="large-box" id="pots">
+        <div class="large-box fade-hidden" id="pots">
             <h3>Flower Pots</h3>
             <hr>
             <div class="tour-box">
@@ -75,7 +75,7 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus nulla velit autem atque fuga numquam nam labore, nostrum, molestiae aut laudantium fugiat dolorum necessitatibus a saepe minima laborum. Laborum, asperiores! Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda saepe beatae ullam nostrum ducimus, tenetur consequuntur ea consectetur quod temporibus dicta quidem aliquid debitis expedita perferendis, amet fugit, rerum impedit.Eum exercitationem, voluptates ullam, neque necessitatibus earum quo, nesciunt non excepturi esse quisquam! Incidunt architecto, dolorum ad molestiae voluptatibus harum accusamus in quis veniam sed? Suscipit culpa veritatis laudantium error. Accusamus, atque tempora aut magni aliquid facilis provident quia ut deleniti fugit quibusdam vitae veritatis rerum explicabo, consectetur nisi eos, numquam deserunt eveniet impedit. Maiores repellat aperiam facilis nobis ipsa.</p>
             </div> 
         </div>
-        <div class="large-box" id="dec">
+        <div class="large-box fade-hidden" id="dec">
             <h3>Decorations</h3>
             <hr>
             <div class="tour-box">
@@ -86,7 +86,7 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus nulla velit autem atque fuga numquam nam labore, nostrum, molestiae aut laudantium fugiat dolorum necessitatibus a saepe minima laborum. Laborum, asperiores! Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda saepe beatae ullam nostrum ducimus, tenetur consequuntur ea consectetur quod temporibus dicta quidem aliquid debitis expedita perferendis, amet fugit, rerum impedit.Eum exercitationem, voluptates ullam, neque necessitatibus earum quo, nesciunt non excepturi esse quisquam! Incidunt architecto, dolorum ad molestiae voluptatibus harum accusamus in quis veniam sed? Suscipit culpa veritatis laudantium error. Accusamus, atque tempora aut magni aliquid facilis provident quia ut deleniti fugit quibusdam vitae veritatis rerum explicabo, consectetur nisi eos, numquam deserunt eveniet impedit. Maiores repellat aperiam facilis nobis ipsa.</p>
             </div> 
         </div>
-        <div class="large-box" id="wild-life">
+        <div class="large-box fade-hidden" id="wild-life">
             <h3>Wild Life</h3>
             <hr>
             <div class="tour-box">
@@ -106,5 +106,23 @@
              <br> <br>
         </p>
     </footer>
+    <script> 
+        (function () {
+        const faders = document.querySelectorAll('.fade-hidden');
+        const options = {
+            threshold: 0.05            
+        }; 
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('fade-visible');
+            } else {                 
+                entry.target.classList.remove('fade-visible');
+            }
+            });
+        }, options); 
+        faders.forEach(el => io.observe(el));
+        })();
+    </script> 
 </body>
 </html>

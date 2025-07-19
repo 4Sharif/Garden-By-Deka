@@ -47,7 +47,7 @@
                 <option value="2025">2025</option> 
             </select>
         </div>
-        <div class="large-box" id="august">
+        <div class="large-box fade-hidden" id="august">
             <h3>August 2025</h3>
             <hr> 
             <div class="carousel"> 
@@ -108,7 +108,7 @@
                 </ul>
             </div>
         </div>
-        <div class="large-box" id="july">
+        <div class="large-box fade-hidden" id="july">
             <h3>July 2025</h3>
             <hr>
             <div class="carousel"> 
@@ -174,5 +174,23 @@
         monthSelect.addEventListener('change', scrollToSection);
         yearSelect.addEventListener('change', scrollToSection);
     </script>
+    <script> 
+        (function () {
+        const faders = document.querySelectorAll('.fade-hidden');
+        const options = {
+            threshold: 0.05            
+        }; 
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('fade-visible');
+            } else {                 
+                entry.target.classList.remove('fade-visible');
+            }
+            });
+        }, options); 
+        faders.forEach(el => io.observe(el));
+        })();
+    </script> 
 </body>
 </html>

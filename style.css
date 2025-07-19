@@ -299,6 +299,7 @@ body {
     margin: 50px;
     background-color: hsla(0, 0%, 90%, 0.8);
     width: 25%;
+    height: auto;
     border-radius: 15px;
     opacity: 90%;
 }
@@ -315,8 +316,8 @@ body {
     margin: auto;  
     border-radius: 15%; 
     opacity: 90%; 
-    width: 240px;
-    height: 200px;
+    width: 80%;
+    height: 80%;
     object-fit: contain; 
 }
 
@@ -388,6 +389,17 @@ body {
     width: 300px;
     height: 255px;
     object-fit: contain; 
+}
+
+.fade-hidden {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity .5s ease-out, transform .5s ease-out;
+}
+
+.fade-visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 footer { 

@@ -36,19 +36,19 @@
         </div>
     </div>
     <main>
-        <div class="wide-box">
+        <div class="wide-box fade-hidden">
             <h3>Who is Deka?</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, cumque quae dolor iusto nostrum deleniti nulla, omnis sit sed laudantium voluptas temporibus accusamus architecto sapiente? Sunt ratione recusandae quisquam amet. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium voluptatum totam aliquid neque cum accusamus, explicabo quae alias corporis et sit tempore numquam ullam ut, nulla quo. Sapiente, delectus quidem. Labore impedit vitae, aliquam veniam beatae laboriosam ab, deserunt eveniet quos omnis id eum saepe! Sunt totam cumque dolor dicta fugit non rem sit, dolore ea culpa ut? Accusamus, quam. Sapiente nemo vel voluptatibus rem optio ipsam, facilis debitis, aliquid quisquam ex harum consequatur! Doloribus totam itaque, neque dolor doloremque autem et, eligendi quas, cupiditate ut assumenda perferendis tempore veritatis.</p>
         </div>
-        <div class="wide-box">
+        <div class="wide-box fade-hidden">
             <h3>What is This Garden For?</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, cumque quae dolor iusto nostrum deleniti nulla, omnis sit sed laudantium voluptas temporibus accusamus architecto sapiente? Sunt ratione recusandae quisquam amet. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium voluptatum totam aliquid neque cum accusamus, explicabo quae alias corporis et sit tempore numquam ullam ut, nulla quo. Sapiente, delectus quidem. Labore impedit vitae, aliquam veniam beatae laboriosam ab, deserunt eveniet quos omnis id eum saepe! Sunt totam cumque dolor dicta fugit non rem sit, dolore ea culpa ut? Accusamus, quam. Sapiente nemo vel voluptatibus rem optio ipsam, facilis debitis, aliquid quisquam ex harum consequatur! Doloribus totam itaque, neque dolor doloremque autem et, eligendi quas, cupiditate ut assumenda perferendis tempore veritatis.</p>
         </div>
-        <div class="wide-box">
+        <div class="wide-box fade-hidden">
             <h3>When Was This Garden Created and Where Is It?</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, cumque quae dolor iusto nostrum deleniti nulla, omnis sit sed laudantium voluptas temporibus accusamus architecto sapiente? Sunt ratione recusandae quisquam amet. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium voluptatum totam aliquid neque cum accusamus, explicabo quae alias corporis et sit tempore numquam ullam ut, nulla quo. Sapiente, delectus quidem. Labore impedit vitae, aliquam veniam beatae laboriosam ab, deserunt eveniet quos omnis id eum saepe! Sunt totam cumque dolor dicta fugit non rem sit, dolore ea culpa ut? Accusamus, quam. Sapiente nemo vel voluptatibus rem optio ipsam, facilis debitis, aliquid quisquam ex harum consequatur! Doloribus totam itaque, neque dolor doloremque autem et, eligendi quas, cupiditate ut assumenda perferendis tempore veritatis.</p>
         </div>
-        <div class="wide-box">
+        <div class="wide-box fade-hidden">
             <h3>Why Does This Garden Matter?</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, cumque quae dolor iusto nostrum deleniti nulla, omnis sit sed laudantium voluptas temporibus accusamus architecto sapiente? Sunt ratione recusandae quisquam amet. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium voluptatum totam aliquid neque cum accusamus, explicabo quae alias corporis et sit tempore numquam ullam ut, nulla quo. Sapiente, delectus quidem. Labore impedit vitae, aliquam veniam beatae laboriosam ab, deserunt eveniet quos omnis id eum saepe! Sunt totam cumque dolor dicta fugit non rem sit, dolore ea culpa ut? Accusamus, quam. Sapiente nemo vel voluptatibus rem optio ipsam, facilis debitis, aliquid quisquam ex harum consequatur! Doloribus totam itaque, neque dolor doloremque autem et, eligendi quas, cupiditate ut assumenda perferendis tempore veritatis.</p>
         </div>
@@ -61,5 +61,23 @@
              <br> <br>
         </p>
     </footer>
+    <script> 
+        (function () {
+        const faders = document.querySelectorAll('.fade-hidden');
+        const options = {
+            threshold: 0.05            
+        }; 
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('fade-visible');
+            } else {                 
+                entry.target.classList.remove('fade-visible');
+            }
+            });
+        }, options); 
+        faders.forEach(el => io.observe(el));
+        })();
+    </script> 
 </body>
 </html>
