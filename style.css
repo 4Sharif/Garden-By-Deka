@@ -322,7 +322,7 @@ body {
 
 .tour-box {
     margin: 50px auto;
-    padding: 50px 100px;
+    padding: 80px 100px;
     width: 80%;
     height: 60%;
     background-color: hsla(0, 0%, 90%, 0.8);
@@ -358,19 +358,19 @@ body {
 }
 
 .large-box ul {
-    margin: 20px auto;
+    margin: 10px auto;
     width: 80%; 
     padding: 20px;
     display: flex;
     justify-content: space-evenly;
-    gap: 0.25%; 
+    gap: 1em; 
     overflow-x: hidden;
 }
 
 .large-box li {
     list-style-type: none;  
     padding: 20px; 
-    flex: 0 0 100%; 
+    flex: 0 0 100%;  
 } 
 
 .large-box ul {
@@ -383,9 +383,11 @@ body {
     display: none;
 } 
 
-.large-box ul img {
-    border: 1px solid black;
+.large-box ul img { 
     border-radius: 3%;
+    width: 300px;
+    height: 255px;
+    object-fit: contain; 
 }
 
 footer { 
