@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400&display=swap');
 
 * {
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 :root {
@@ -238,7 +238,7 @@ body {
 } 
 
 .wide-box .facts {
-    font-size: 1.2em;
+    font-size: 1.2em; 
 }
 
 .wide-box-links {
@@ -261,10 +261,13 @@ body {
     margin: 50px;
     border: 2px solid black;
     padding: 40px;
-    width: 92vw;
-    height: 1579px;
+    width: 92vw; 
     border-radius: 15px;
-    background-color: hsla(0, 0%, 100%, 0.8);  
+    background-color: hsla(0, 0%, 100%, 0.8); 
+    height: auto;          
+    display: flex;         
+    flex-direction: column;
+    gap: 1rem; 
 }
 
 .large-box h3 {
