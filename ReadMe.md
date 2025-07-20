@@ -1,4 +1,4 @@
-# Garden By Deka 🌸
+# Garden By Deka 
 **Status:** Under Development
 
 Welcome to **Garden By Deka**, a gardening blog created for TikTok creator **Deka** (@ladybugs2002). This site showcases all the work she put into her garden. There's four pages, and they all share a consistent theme built with **HTM, CSS, and JavaScript**.
