@@ -1,4 +1,5 @@
 # Garden By Deka  
+Gardening blog
 
 Welcome to **Garden By Deka**, a gardening blog created for TikTok creator **Deka** (@ladybugs2002). This site showcases all the work she put into her garden. There's four pages, and they all share a consistent theme built with **HTM, CSS, and JavaScript**.
 
@@ -18,8 +19,5 @@ Welcome to **Garden By Deka**, a gardening blog created for TikTok creator *
 ## Setup
 
 1. **Clone / download** this repository  
-   ```bash
-   git clone https://github.com/<your‑user>/garden‑by‑deka.git
-   cd garden‑by‑deka
 2. **Run a local server** for live reloads
 3. **Open your browser** using your sever
