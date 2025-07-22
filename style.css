@@ -420,7 +420,8 @@ footer a:hover {
     color: hsla(0, 0%, 10%, 0.5);
 } 
 
-@media screen and (max-width: 576px) {
+/* SMALL */
+@media screen and (max-width: 768px) {
     .sticky {
         display: none;
     }
@@ -471,7 +472,8 @@ footer a:hover {
         width: 80%;
     } 
     .large-box-flex { 
-        padding: 5px;
+        padding: 15px;
+        margin-bottom: -10px;
     }
     .large-box-flex h3 {
         font-size: 1.2em;
@@ -490,7 +492,7 @@ footer a:hover {
     .tour-box p {
         font-size: 0.7em;
         text-align: left;
-        padding: 1% 7%;
+        padding: 3% 7%;
     }
     .small-box-flex {
         flex-flow: column;
@@ -512,6 +514,94 @@ footer a:hover {
     }
 } 
 
-@media screen and (577px <= width <= 768px) {
-    
+/* MEDIUM */
+@media screen and (769px <= width <= 992px) { 
+    .sticky {
+        display: none;
+    }
+    .cta:active {
+        background-color: hsla(0, 0%, 90%, 0.80);
+    }
+    .hero-title {
+        font-size: 65px;
+        padding: 70px 0;
+    }
+    .hero-nav {  
+        font-size: 19px;
+        gap: 1.5rem;
+    }
+    .medium-box-side-content {
+        flex-direction: column;
+    }
+    .wide-box {
+        width: 80vw;
+        margin: auto;
+    }
+    .wide-box p {
+        text-align: left;
+    }
+    .wide-box-links {
+        display: none;
+    }
+    .medium-box-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+    .medium-box {
+        width: 80%;           
+        margin: 30px 0; 
+    }
+    .medium-box p {
+        text-align: left;
+    }
+    .medium-box a:active {
+        text-decoration: underline;
+        color: hsla(0, 0%, 10%, 0.5);
+    }
+    .wide-box {
+        margin: 40px auto;
+    }
+    .large-box {
+        margin: 20px auto;
+        width: 80%;
+    } 
+    .large-box-flex { 
+        padding: 15px;
+        margin-bottom: -10px;
+    }
+    .large-box-flex h3 {
+        font-size: 2em;
+        text-align: center;  
+    }
+    .large-box-flex img {
+        margin: 20px 30px; 
+        width: 50%;  
+        height: 50%;
+        object-fit: cover;
+    }
+    .tour-box {
+        padding: 30px;
+        width: 100%;
+    }
+    .tour-box p {
+        font-size: 0.7em;
+        text-align: left;
+        padding: 3% 7%;
+    } 
+    .small-box {
+        margin: 20px auto;
+        width: 70%;
+    } 
+    .large-box li { 
+        border: none; 
+        scroll-snap-align: center;
+    } 
+    .large-box ul img {  
+        width: 50vw;
+        height: 50vh;  
+        justify-items: space-evenly;
+    }
+    .fade-hidden, .fade-visible {
+        opacity: 1; 
+    }
 }
