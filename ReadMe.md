@@ -16,7 +16,7 @@ Welcome to **Garden By Deka**, a gardening blog created for TikTok creator *
 
 ---
 
-## Local Setup
+## Setup
 
 1. **Clone / download** this repository  
    ```bash
